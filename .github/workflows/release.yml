@@ -1,0 +1,25 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create custom release archive
+        run: |
+          # Create archive with desired structure
+          mkdir -p release
+          git archive --format=tar.gz -o release/zerof-1.2.tar.gz HEAD
+          # Add your custom logic here to rename files or structure
+
+      - name: Upload Release Asset
+        uses: softprops/action-gh-release@v1
+        with:
+          files: release/zerof-1.2.tar.gz
