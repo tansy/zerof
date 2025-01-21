@@ -1,5 +1,7 @@
 /*
  * zerof.c
+ *
+ * This program is distributed under General Public License version 2
  */
 
 #include <stdio.h>
