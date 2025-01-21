@@ -10,7 +10,7 @@
 
 long int flength (FILE *f);
 
-#define BUF_SIZE 1024*8
+#define BUF_SIZE 1024*16
 
 
 int main (int argc, char** argv)
