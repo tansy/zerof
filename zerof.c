@@ -28,7 +28,7 @@ int main (int argc, char** argv)
     FIN = fopen(argv[1], "rb+");
     if (FIN == NULL)
         {
-        fprintf(stderr, "Cannot open input file (%s)\n", program_name);
+        fprintf(stderr, "Cannot open input file %s\n", program_name);
         return 1;
         }
     buf = (char*)calloc(BUF_SIZE, 1);
